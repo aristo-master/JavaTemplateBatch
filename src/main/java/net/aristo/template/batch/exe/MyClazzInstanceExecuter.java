@@ -16,6 +16,7 @@ import net.aristo.template.batch.common.exception.InputParameterCheckException;
  */
 public class MyClazzInstanceExecuter extends AbstractExecuter {
 
+   /** logger */
    private static final Logger log = LoggerFactory.getLogger(MyClazzInstanceExecuter.class);
 
    /**

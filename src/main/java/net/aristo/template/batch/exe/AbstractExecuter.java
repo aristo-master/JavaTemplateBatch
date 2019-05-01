@@ -16,8 +16,12 @@ import net.aristo.template.batch.common.exception.InputParameterCheckException;
  */
 public abstract class AbstractExecuter implements Executer {
 
+   /** logger */
    private static final Logger log = LoggerFactory.getLogger(LogSampleExecuter.class);
 
+   /* (非 Javadoc)
+    * @see net.aristo.template.batch.exe.Executer#start(java.lang.String[])
+    */
    public void start(String[] args) throws InputParameterCheckException {
 
       /*
@@ -29,7 +33,7 @@ public abstract class AbstractExecuter implements Executer {
 
       } catch (InputParameterCheckException e) {
 
-         log.error("入力引数が不正です。");
+         log.error("入力引数チェックにて不正を検知しました。");
          throw e;
 
       }

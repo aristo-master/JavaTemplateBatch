@@ -17,6 +17,7 @@ import net.aristo.template.batch.common.exception.InputParameterCheckException;
  */
 public class LogSampleExecuter extends AbstractExecuter {
 
+   /** logger */
    private static final Logger log = LoggerFactory.getLogger(LogSampleExecuter.class);
 
    /**
@@ -27,8 +28,8 @@ public class LogSampleExecuter extends AbstractExecuter {
     */
    public static void main(String[] args) throws InputParameterCheckException {
 
-      LogSampleExecuter logSampleExecuter = new LogSampleExecuter();
-      logSampleExecuter.start(args);
+      LogSampleExecuter exe = new LogSampleExecuter();
+      exe.start(args);
 
    }
 
