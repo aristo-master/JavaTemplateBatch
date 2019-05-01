@@ -17,7 +17,6 @@
          <charset>UTF-8</charset>
          <pattern>${PATTERN}</pattern>
       </encoder>
-      <prudent>false</prudent>
    </appender>
 
    <!-- 全ログ -->
@@ -47,7 +46,7 @@
    <!-- TRACEログ -->
    <appender name="TRACE"
       class="ch.qos.logback.core.rolling.RollingFileAppender">
-      <file>${LOG_DIR}/debug.log</file>
+      <file>${LOG_DIR}/trace.log</file>
       <rollingPolicy
          class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
          <fileNamePattern>${LOG_DIR}/trace-%d{yyyyMMdd}.log</fileNamePattern>
@@ -62,7 +61,6 @@
          <charset>UTF-8</charset>
          <pattern>${PATTERN}</pattern>
       </encoder>
-      <prudent>true</prudent>
    </appender>
 
    <!-- DEBUGログ -->
@@ -83,7 +81,6 @@
          <charset>UTF-8</charset>
          <pattern>${PATTERN}</pattern>
       </encoder>
-      <prudent>true</prudent>
    </appender>
 
    <!-- INFOログ -->
@@ -104,7 +101,6 @@
          <charset>UTF-8</charset>
          <pattern>${PATTERN}</pattern>
       </encoder>
-      <prudent>true</prudent>
    </appender>
 
    <!-- WARNログ -->
@@ -125,7 +121,6 @@
          <charset>UTF-8</charset>
          <pattern>${PATTERN}</pattern>
       </encoder>
-      <prudent>true</prudent>
    </appender>
 
    <!-- ERRORログ -->
@@ -141,7 +136,6 @@
          <charset>UTF-8</charset>
          <pattern>${PATTERN}</pattern>
       </encoder>
-      <prudent>true</prudent>
    </appender>
 
    <!-- ロガー・root設定 -->
@@ -157,14 +151,10 @@
 
    <!-- ロガー・パッケージ別設定 -->
    <logger name="net.solutions.aristo" additivity="false"
-      level="INFO">
-      <appender-ref ref="STOUT" />
-      <appender-ref ref="ALL" />
-      <appender-ref ref="TRACE" />
-      <appender-ref ref="DEBUG" />
-      <appender-ref ref="INFO" />
-      <appender-ref ref="WARN" />
-      <appender-ref ref="ERROR" />
-   </logger>
+      level="INFO" />
+   <logger name="org.springframework" additivity="false"
+      level="WARN" />
+   <logger name="javax.management" additivity="false"
+      level="WARN" />
 
 </configuration>
