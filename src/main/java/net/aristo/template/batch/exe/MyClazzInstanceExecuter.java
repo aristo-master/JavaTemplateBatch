@@ -6,8 +6,6 @@ package net.aristo.template.batch.exe;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import net.aristo.template.batch.common.exception.InputParameterCheckException;
-
 /**
  * 自分のクラスをnewすることも出来るというサンプルです。
  *
@@ -21,9 +19,9 @@ public class MyClazzInstanceExecuter extends AbstractExecuter {
 
    /**
     * @param args
-    * @throws InputParameterCheckException
+    * @throws Exception
     */
-   public static void main(String[] args) throws InputParameterCheckException {
+   public static void main(String[] args) throws Exception {
 
       /*
        * mainメソッドから直接メソッドを実行しようとすると、他のメソッドも全部staticにしなければならない。

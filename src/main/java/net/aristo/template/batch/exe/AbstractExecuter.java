@@ -3,6 +3,8 @@
  */
 package net.aristo.template.batch.exe;
 
+import java.io.IOException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,7 +24,8 @@ public abstract class AbstractExecuter implements Executer {
    /* (非 Javadoc)
     * @see net.aristo.template.batch.exe.Executer#start(java.lang.String[])
     */
-   public void start(String[] args) throws InputParameterCheckException {
+   @Override
+   public void start(String[] args) throws Exception {
 
       /*
        * 入力引数のバリデーションチェックを行う。
@@ -37,6 +40,11 @@ public abstract class AbstractExecuter implements Executer {
          throw e;
 
       }
+
+      /*
+       * バッチの二重起動チェックを行う。
+       */
+      doubleStartCheck();
 
       /*
        * 処理の本体を実行する。
@@ -62,9 +70,26 @@ public abstract class AbstractExecuter implements Executer {
    };
 
    /**
+    * バッチの二重起動チェック
+    *
+    * @param args 入力引数
+    * @throws IOException
+    */
+   protected void doubleStartCheck() throws IOException {
+
+      log.debug("doubleStartCheck:{}", "start");
+
+      log.debug("二重起動チェックはありません。");
+
+      log.debug("doubleStartCheck:{}", "end");
+
+   };
+
+   /**
     * 処理の本体
     *
     * @param args 入力引数
+    * @throws Exception
     */
-   public abstract void doStart(String[] args);
+   public abstract void doStart(String[] args) throws Exception;
 }

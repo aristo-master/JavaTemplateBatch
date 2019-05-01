@@ -24,9 +24,9 @@ public class InputCheckSampleExecuter extends AbstractExecuter {
     * 処理実行
     *
     * @param args 入力引数
-    * @throws InputParameterCheckException
+    * @throws Exception
     */
-   public static void main(String[] args) throws InputParameterCheckException {
+   public static void main(String[] args) throws Exception {
 
       InputCheckSampleExecuter exe = new InputCheckSampleExecuter();
       exe.start(args);

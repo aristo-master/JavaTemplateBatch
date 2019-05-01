@@ -7,8 +7,6 @@ package net.aristo.template.batch.exe;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import net.aristo.template.batch.common.exception.InputParameterCheckException;
-
 /**
  * ログ出力の挙動を確認する為のサンプルクラスです。
  *
@@ -24,9 +22,9 @@ public class LogSampleExecuter extends AbstractExecuter {
     * 処理実行
     *
     * @param args 入力引数
-    * @throws InputParameterCheckException
+    * @throws Exception
     */
-   public static void main(String[] args) throws InputParameterCheckException {
+   public static void main(String[] args) throws Exception {
 
       LogSampleExecuter exe = new LogSampleExecuter();
       exe.start(args);
