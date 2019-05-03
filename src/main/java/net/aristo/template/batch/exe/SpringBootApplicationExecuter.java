@@ -22,7 +22,9 @@ public class SpringBootApplicationExecuter extends AbstractExecuter {
    private static final Logger logger = LoggerFactory.getLogger(SpringBootApplicationExecuter.class);
 
    /**
-    * @param args
+    * 処理実行
+    *
+    * @param args 入力引数
     * @throws Exception
     */
    public static void main(String[] args) throws Exception {
@@ -34,6 +36,9 @@ public class SpringBootApplicationExecuter extends AbstractExecuter {
 
    }
 
+   /* (非 Javadoc)
+    * @see net.aristo.template.batch.exe.AbstractExecuter#doStart(java.lang.String[])
+    */
    @Override
    public void doStart(String[] args) {
 
