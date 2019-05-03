@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * システム日付をＤＩ注入で切り替えるサンプルです。
+ * ResourceBundleの挙動確認用サンプルです。
  *
  * @author アリストマスター
  *

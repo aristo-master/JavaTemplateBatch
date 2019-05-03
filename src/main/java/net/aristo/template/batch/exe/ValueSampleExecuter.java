@@ -13,7 +13,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import net.aristo.template.batch.App;
 
 /**
- * システム日付をＤＩ注入で切り替えるサンプルです。
+ * Valueアノテーションの挙動確認用サンプルです。
  *
  * @author アリストマスター
  *
