@@ -3,6 +3,8 @@
  */
 package net.aristo.template.batch.exe;
 
+import java.util.ResourceBundle;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -60,6 +62,12 @@ public class ValueSampleExecuter extends AbstractExecuter {
       logger.info("valueSampleString={}", valueSampleString);
       logger.info("valueSampleInteger={}", valueSampleInteger);
       logger.info("valueSampleBoolean={}", valueSampleBoolean);
+
+      ResourceBundle bundle = ResourceBundle.getBundle("application");
+
+      logger.info("valueSampleString={}", bundle.getString("valueSampleString"));
+      logger.info("valueSampleInteger={}", bundle.getString("valueSampleInteger"));
+      logger.info("valueSampleBoolean={}", bundle.getString("valueSampleBoolean"));
 
    }
 
