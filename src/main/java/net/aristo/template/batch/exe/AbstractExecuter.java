@@ -19,7 +19,7 @@ import net.aristo.template.batch.common.exception.InputParameterCheckException;
 public abstract class AbstractExecuter implements Executer {
 
    /** logger */
-   private static final Logger log = LoggerFactory.getLogger(LogSampleExecuter.class);
+   private static final Logger logger = LoggerFactory.getLogger(LogSampleExecuter.class);
 
    /* (非 Javadoc)
     * @see net.aristo.template.batch.exe.Executer#start(java.lang.String[])
@@ -36,7 +36,7 @@ public abstract class AbstractExecuter implements Executer {
 
       } catch (InputParameterCheckException e) {
 
-         log.error("入力引数チェックにて不正を検知しました。");
+         logger.error("入力引数チェックにて不正を検知しました。");
          throw e;
 
       }
@@ -61,11 +61,11 @@ public abstract class AbstractExecuter implements Executer {
     */
    protected void inputParameterCheck(String[] args) throws InputParameterCheckException {
 
-      log.debug("inputParameterCheck:{}", "start");
+      logger.debug("inputParameterCheck:{}", "start");
 
-      log.debug("入力引数のバリデーションチェックはありません。");
+      logger.debug("入力引数のバリデーションチェックはありません。");
 
-      log.debug("inputParameterCheck:{}", "end");
+      logger.debug("inputParameterCheck:{}", "end");
 
    };
 
@@ -77,11 +77,11 @@ public abstract class AbstractExecuter implements Executer {
     */
    protected void doubleStartCheck() throws IOException {
 
-      log.debug("doubleStartCheck:{}", "start");
+      logger.debug("doubleStartCheck:{}", "start");
 
-      log.debug("二重起動チェックはありません。");
+      logger.debug("二重起動チェックはありません。");
 
-      log.debug("doubleStartCheck:{}", "end");
+      logger.debug("doubleStartCheck:{}", "end");
 
    };
 

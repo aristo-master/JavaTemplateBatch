@@ -18,7 +18,7 @@ import net.aristo.template.batch.common.exception.InputParameterCheckException;
 public class InputCheckSampleExecuter extends AbstractExecuter {
 
    /** logger */
-   private static final Logger log = LoggerFactory.getLogger(InputCheckSampleExecuter.class);
+   private static final Logger logger = LoggerFactory.getLogger(InputCheckSampleExecuter.class);
 
    /**
     * 処理実行
@@ -42,7 +42,7 @@ public class InputCheckSampleExecuter extends AbstractExecuter {
    @Override
    protected void inputParameterCheck(String[] args) throws InputParameterCheckException {
 
-      log.debug("inputParameterCheck:{}", "start");
+      logger.debug("inputParameterCheck:{}", "start");
 
       if (args == null || args.length == 0) {
 
@@ -50,7 +50,7 @@ public class InputCheckSampleExecuter extends AbstractExecuter {
 
       }
 
-      log.debug("inputParameterCheck:{}", "end");
+      logger.debug("inputParameterCheck:{}", "end");
 
    };
 
@@ -60,7 +60,7 @@ public class InputCheckSampleExecuter extends AbstractExecuter {
    @Override
    public void doStart(String[] args) {
 
-      log.warn("本体の処理です。");
+      logger.warn("本体の処理です。");
 
    }
 

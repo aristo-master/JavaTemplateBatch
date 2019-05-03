@@ -72,7 +72,7 @@ public class HashAlgorithmExecuter extends AbstractExecuter {
       String hashTextSHA512 = MessageDigestUtils.messageDigestSHA512(targetText);
       logger.info("SHA512={}", hashTextSHA512);
 
-      //ソルト
+      //秘密鍵
       String secretkey = "hogehoge";
 
       String hashTextHMAC = MessageDigestUtils.messageDigestHmac(baseText, secretkey);

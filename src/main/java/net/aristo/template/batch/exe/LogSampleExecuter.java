@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
 public class LogSampleExecuter extends AbstractExecuter {
 
    /** logger */
-   private static final Logger log = LoggerFactory.getLogger(LogSampleExecuter.class);
+   private static final Logger logger = LoggerFactory.getLogger(LogSampleExecuter.class);
 
    /**
     * 処理実行
@@ -37,11 +37,11 @@ public class LogSampleExecuter extends AbstractExecuter {
    @Override
    public void doStart(String[] args) {
 
-      log.trace("{}レベルのログ出力テストです。", "trace");
-      log.debug("{}レベルのログ出力テストです。", "debug");
-      log.info("{}レベルのログ出力テストです。", "info");
-      log.warn("{}レベルのログ出力テストです。", "warn");
-      log.error("{}レベルのログ出力テストです。", "error");
+      logger.trace("{}レベルのログ出力テストです。", "trace");
+      logger.debug("{}レベルのログ出力テストです。", "debug");
+      logger.info("{}レベルのログ出力テストです。", "info");
+      logger.warn("{}レベルのログ出力テストです。", "warn");
+      logger.error("{}レベルのログ出力テストです。", "error");
 
    }
 

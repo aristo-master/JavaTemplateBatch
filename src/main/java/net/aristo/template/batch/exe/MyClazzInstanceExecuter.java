@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 public class MyClazzInstanceExecuter extends AbstractExecuter {
 
    /** logger */
-   private static final Logger log = LoggerFactory.getLogger(MyClazzInstanceExecuter.class);
+   private static final Logger logger = LoggerFactory.getLogger(MyClazzInstanceExecuter.class);
 
    /**
     * @param args
@@ -37,7 +37,7 @@ public class MyClazzInstanceExecuter extends AbstractExecuter {
    @Override
    public void doStart(String[] args) {
 
-      log.info("自分自身のクラスをnewしてインスタンスを作成することが出来ます。");
+      logger.info("自分自身のクラスをnewしてインスタンスを作成することが出来ます。");
 
    }
 

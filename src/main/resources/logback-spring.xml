@@ -150,11 +150,11 @@
    </root>
 
    <!-- ロガー・パッケージ別設定 -->
-   <logger name="net.solutions.aristo" additivity="false"
+   <logger name="net.solutions.aristo" additivity="true"
       level="INFO" />
-   <logger name="org.springframework" additivity="false"
+   <logger name="org.springframework" additivity="true"
       level="WARN" />
-   <logger name="javax.management" additivity="false"
+   <logger name="javax.management" additivity="true"
       level="WARN" />
 
 </configuration>

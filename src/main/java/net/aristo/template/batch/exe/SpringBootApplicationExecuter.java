@@ -19,7 +19,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class SpringBootApplicationExecuter extends AbstractExecuter {
 
    /** logger */
-   private static final Logger log = LoggerFactory.getLogger(SpringBootApplicationExecuter.class);
+   private static final Logger logger = LoggerFactory.getLogger(SpringBootApplicationExecuter.class);
 
    /**
     * @param args
@@ -37,7 +37,7 @@ public class SpringBootApplicationExecuter extends AbstractExecuter {
    @Override
    public void doStart(String[] args) {
 
-      log.info("SpringBootを経由してインスタンスを作成しました。");
+      logger.info("SpringBootを経由してインスタンスを作成しました。");
 
    }
 

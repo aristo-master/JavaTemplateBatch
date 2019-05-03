@@ -22,7 +22,7 @@ import net.aristo.template.batch.common.util.DoubleStartChecker;
 public class DoubleStartCheckSampleExecuter extends AbstractExecuter {
 
    /** logger */
-   private static final Logger log = LoggerFactory.getLogger(DoubleStartCheckSampleExecuter.class);
+   private static final Logger logger = LoggerFactory.getLogger(DoubleStartCheckSampleExecuter.class);
 
    /** 二重起動防止ロックのファイルパス */
    private String lockFilePath = "R:\\/lock";
@@ -50,7 +50,7 @@ public class DoubleStartCheckSampleExecuter extends AbstractExecuter {
    @Override
    protected void doubleStartCheck() throws IOException {
 
-      log.debug("doubleStartCheck:{}", "start");
+      logger.debug("doubleStartCheck:{}", "start");
 
       try (DoubleStartChecker dsc = new DoubleStartChecker()) {
 
@@ -60,13 +60,13 @@ public class DoubleStartCheckSampleExecuter extends AbstractExecuter {
 
          } else {
 
-            log.info("二重起動していません。");
+            logger.info("二重起動していません。");
 
          }
 
       }
 
-      log.debug("doubleStartCheck:{}", "end");
+      logger.debug("doubleStartCheck:{}", "end");
 
    };
 
@@ -79,7 +79,7 @@ public class DoubleStartCheckSampleExecuter extends AbstractExecuter {
       try (DoubleStartChecker dsc = new DoubleStartChecker()) {
 
          if (dsc.check("R:\\/file-to-lock")) {
-            log.info("正常に起動しました。");
+            logger.info("正常に起動しました。");
          }
 
       }
