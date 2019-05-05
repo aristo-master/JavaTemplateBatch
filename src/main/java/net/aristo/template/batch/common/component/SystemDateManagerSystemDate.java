@@ -1,4 +1,4 @@
-package net.aristo.template.batch.common.util;
+package net.aristo.template.batch.common.component;
 
 import java.util.Date;
 
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * @author アリストマスター
  *
  */
-@Component("net.aristo.template.batch.common.util.SystemDateManagerSystemDate")
+@Component("net.aristo.template.batch.common.component.SystemDateManagerSystemDate")
 public class SystemDateManagerSystemDate implements SystemDateManager {
 
    /** logger */

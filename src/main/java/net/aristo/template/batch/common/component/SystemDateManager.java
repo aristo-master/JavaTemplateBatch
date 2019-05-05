@@ -1,4 +1,4 @@
-package net.aristo.template.batch.common.util;
+package net.aristo.template.batch.common.component;
 
 import java.util.Date;
 

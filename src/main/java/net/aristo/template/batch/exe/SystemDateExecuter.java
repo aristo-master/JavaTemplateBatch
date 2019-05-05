@@ -13,7 +13,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
 
 import net.aristo.template.batch.App;
-import net.aristo.template.batch.common.util.SystemDateManager;
+import net.aristo.template.batch.common.component.SystemDateManager;
 
 /**
  * システム日付をＤＩ注入で切り替えるサンプルです。
