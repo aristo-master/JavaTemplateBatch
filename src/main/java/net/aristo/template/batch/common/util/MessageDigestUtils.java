@@ -21,8 +21,8 @@ public class MessageDigestUtils {
    /**
     * MD2でハッシュ化する。
     *
-    * @param text ハッシュ化テキスト
-    * @return
+    * @param text ハッシュ化対象テキスト
+    * @return ハッシュ化済み文字列
     * @throws NoSuchAlgorithmException
     */
    public static String messageDigestMD2(String text) throws NoSuchAlgorithmException {
@@ -43,8 +43,8 @@ public class MessageDigestUtils {
    /**
     * MD5でハッシュ化する。
     *
-    * @param text ハッシュ化テキスト
-    * @return
+    * @param text ハッシュ化対象テキスト
+    * @return ハッシュ化済み文字列
     * @throws NoSuchAlgorithmException
     */
    public static String messageDigestMD5(String text) throws NoSuchAlgorithmException {
@@ -65,8 +65,8 @@ public class MessageDigestUtils {
    /**
     * SHA1でハッシュ化する。
     *
-    * @param text ハッシュ化テキスト
-    * @return
+    * @param text ハッシュ化対象テキスト
+    * @return ハッシュ化済み文字列
     * @throws NoSuchAlgorithmException
     */
    public static String messageDigestSHA1(String text) throws NoSuchAlgorithmException {
@@ -87,8 +87,8 @@ public class MessageDigestUtils {
    /**
     * SHA256でハッシュ化する。
     *
-    * @param text ハッシュ化テキスト
-    * @return
+    * @param text ハッシュ化対象テキスト
+    * @return ハッシュ化済み文字列
     * @throws NoSuchAlgorithmException
     */
    public static String messageDigestSHA256(String text) throws NoSuchAlgorithmException {
@@ -109,8 +109,8 @@ public class MessageDigestUtils {
    /**
     * SHA-384でハッシュ化する。
     *
-    * @param text ハッシュ化テキスト
-    * @return
+    * @param text ハッシュ化対象テキスト
+    * @return ハッシュ化済み文字列
     * @throws NoSuchAlgorithmException
     */
    public static String messageDigestSHA384(String text) throws NoSuchAlgorithmException {
@@ -131,8 +131,8 @@ public class MessageDigestUtils {
    /**
     * SHA-512でハッシュ化する。
     *
-    * @param text ハッシュ化テキスト
-    * @return
+    * @param text ハッシュ化対象テキスト
+    * @return ハッシュ化済み文字列
     * @throws NoSuchAlgorithmException
     */
    public static String messageDigestSHA512(String text) throws NoSuchAlgorithmException {
@@ -153,9 +153,9 @@ public class MessageDigestUtils {
    /**
     * SHA256HMACでハッシュ化する。
     *
-    * @param text ハッシュ化テキスト
+    * @param text ハッシュ化対象テキスト
     * @param secretKey 秘密鍵
-    * @return
+    * @return ハッシュ化済み文字列
     * @throws NoSuchAlgorithmException
     * @throws InvalidKeyException
     */
