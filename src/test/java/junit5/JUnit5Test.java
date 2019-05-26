@@ -44,9 +44,8 @@ public class JUnit5Test {
    @Test
    public void myTest1() {
 
-      System.out.println("テストその１");
-
       assertEquals(2, 1 + 1);
+
    }
 
    @Test
@@ -55,6 +54,61 @@ public class JUnit5Test {
       System.out.println("テストその２");
 
       assertEquals(2, 1 + 1);
+   }
+
+   @Test
+   public void メソッド名には日本語も使えるんだぜ() {
+
+      assertEquals(2, 1 + 1);
+
+   }
+
+   @Test
+   void dependentAssertions() {
+
+      // コードブロック内でアサーションが失敗すると、同じブロック内の後続のコードはスキップされる。
+      assertAll("properties",
+            () -> {
+               String firstName = "aaa";
+               assertNotNull(firstName);
+
+               // 上のアサーションが成功した場合のみ実行される。
+               assertAll("first name",
+                     () -> assertTrue(firstName.startsWith("J")),
+                     () -> assertTrue(firstName.endsWith("n")));
+            },
+            () -> {
+               // グループ化されたアサーションは、first name のアサーションとは独立して実行される。
+               String lastName = "bbb";
+               assertNotNull(lastName);
+
+               // 上のアサーションが成功した場合のみ実行される。
+               assertAll("last name",
+                     () -> assertTrue(lastName.startsWith("b")),
+                     () -> assertTrue(lastName.endsWith("e")));
+            });
+   }
+
+   @Test
+   void arrayEquals​OK() {
+
+      int[] expected = { 1, 2, 3 };
+
+      int[] actual = { 1, 2, 3 };
+
+      assertArrayEquals(expected, actual);
+
+   }
+
+   @Test
+   void myTest3() {
+
+      int[] expected = { 1, 2, 3 };
+
+      int[] actual = { 4, 5, 6 };
+
+      assertArrayEquals(expected, actual);
+
    }
 
 }
