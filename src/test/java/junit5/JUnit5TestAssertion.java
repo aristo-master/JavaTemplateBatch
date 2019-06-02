@@ -146,14 +146,29 @@ public class JUnit5TestAssertion {
 
    }
 
-   @Test
-   public void myTest2() {
+   @Nested
+   class TestAssertSame {
 
-      String expected = "にゃん";
+      @Test
+      public void myTest1() {
 
-      String actual = "にゃん";
+         String expected = new String("にゃん");
 
-      assertSame(expected, actual);
+         String actual = "にゃん";
+
+         assertEquals(expected, actual);
+      }
+
+      @Test
+      public void myTest2() {
+
+         String expected = "にゃん";
+
+         String actual = "にゃん";
+
+         assertSame(expected, actual);
+      }
+
    }
 
 }
