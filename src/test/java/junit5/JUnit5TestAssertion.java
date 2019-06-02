@@ -3,9 +3,14 @@
  */
 package junit5;
 
+import static org.hamcrest.MatcherAssert.*;
+import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.junit.jupiter.api.Nested;
@@ -50,17 +55,6 @@ public class JUnit5TestAssertion {
 
    }
 
-   @Test
-   void sampleArrayEquals() {
-
-      int[] expected = { 1, 2, 3 };
-
-      int[] actual = { 1, 2, 3 };
-
-      assertArrayEquals(expected, actual);
-
-   }
-
    @Nested
    class TestAssertThrow {
 
@@ -99,6 +93,67 @@ public class JUnit5TestAssertion {
 
       }
 
+   }
+
+   @Nested
+   class TestAssertArray {
+
+      @Test
+      void sampleArrayEquals() {
+
+         int[] expected = { 1, 2, 3 };
+
+         int[] actual = { 1, 2, 3 };
+
+         assertArrayEquals(expected, actual);
+
+      }
+
+      @Test
+      void sampleAssertIterableEquals() {
+
+         List<String> expected = new ArrayList<String>(Arrays.asList("a", "b", "c"));
+
+         List<String> actual = new ArrayList<String>(Arrays.asList("a", "b", "c"));
+
+         assertIterableEquals(expected, actual);
+
+      }
+
+      @Test
+      void sampleAssertIterableEquals2() {
+
+         String[] expected = { "a", "b", "c" };
+
+         String[] actual = { "a", "b", "c" };
+
+         assertIterableEquals(Arrays.asList(expected), Arrays.asList(actual));
+
+      }
+
+      @Test
+      void sampleArrayEqualsHam() {
+
+         String[] expected = { "a", "b", "c" };
+
+         String[] actual = { "a", "b", "c" };
+
+         assertArrayEquals(expected, actual);
+
+         assertThat(actual, arrayContainingInAnyOrder(expected));
+
+      }
+
+   }
+
+   @Test
+   public void myTest2() {
+
+      String expected = "にゃん";
+
+      String actual = "にゃん";
+
+      assertSame(expected, actual);
    }
 
 }
