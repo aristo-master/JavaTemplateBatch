@@ -138,6 +138,21 @@
       </encoder>
    </appender>
 
+   <!-- ERRORログ・検知対象外 -->
+   <appender name="ERROR_NOT_TARGET"
+      class="ch.qos.logback.core.FileAppender">
+      <file>${LOG_DIR}/error_not_target.log</file>
+      <filter class="ch.qos.logback.classic.filter.LevelFilter">
+         <level>ERROR</level>
+         <onMatch>ACCEPT</onMatch>
+         <onMismatch>DENY</onMismatch>
+      </filter>
+      <encoder>
+         <charset>UTF-8</charset>
+         <pattern>${PATTERN}</pattern>
+      </encoder>
+   </appender>
+
    <!-- ロガー・root設定 -->
    <root level="ALL">
       <appender-ref ref="STOUT" />
@@ -154,7 +169,11 @@
       level="INFO" />
    <logger name="org.springframework" additivity="true"
       level="WARN" />
-   <logger name="javax.management" additivity="true"
-      level="WARN" />
+   <logger name="javax.management" additivity="true" level="WARN" />
+
+   <logger name="net.aristo.template.batch.service.LogNotTargetService" additivity="true" level="ERROR">
+      <appender-ref ref="ERROR_NOT_TARGET" />
+   </logger>
+
 
 </configuration>
